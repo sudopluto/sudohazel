@@ -1,6 +1,10 @@
 .PHONY: run
 
-INC=-I../hazel/src
+HZ_INC=-I../hazel/src
+SPD_INC=-I../hazel/vendor/spdlog/include
+
+INC=$(HZ_INC) $(SPD_INC)
+
 HZ_DIR=../hazel/bin/libhazel.so
 
 run: ./bin/sandboxapp
