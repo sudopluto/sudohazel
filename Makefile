@@ -1,6 +1,5 @@
-all:
-	make -C sandbox
-
-clean:
-	make -C hazel clean
-	make -C sandbox clean
+.PHONY: run
+run:
+	meson setup builddir
+	meson compile -C builddir
+	./builddir/sandbox/sandboxapp
